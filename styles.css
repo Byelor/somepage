@@ -1,7 +1,10 @@
 body{
     background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
 }
-
+img{
+	display: block;
+	margin: 0 auto;
+}
 /* Скрываем все элементы внутри body по умолчанию */
 body * {
     opacity: 0;
