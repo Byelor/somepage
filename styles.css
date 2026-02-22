@@ -1,0 +1,31 @@
+body{
+    background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+}
+
+/* Скрываем все элементы внутри body по умолчанию */
+body * {
+    opacity: 0;
+    transform: translateY(20px); /* Немного сместим вниз для красоты */
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Анимация проявления */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Настраиваем задержку для каждого элемента (по очереди) */
+body *:nth-child(1) { animation-delay: 0.5s; }
+body *:nth-child(2) { animation-delay: 1.2s; }
+body *:nth-child(3) { animation-delay: 1.9s; }
+body *:nth-child(4) { animation-delay: 2.6s; }
+
+/* Стили для контента */
+h1, p {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
